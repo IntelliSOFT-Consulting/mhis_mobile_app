@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.components.symptoms.SymptomsFragment">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/medicationFollowupView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <TextView
+                android:id="@+id/medicationFollowupTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/titleStyle"
+                android:text="@string/medicationFollowup"/>
+            <LinearLayout
+                android:id="@+id/medicationFollowupChecks"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/formStyle"
+                android:orientation="vertical"
+                android:layout_below="@+id/medicationFollowupTitle">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/medication"/>
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/medicationNone"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/none" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/dontKnow"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/dontKnow" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/antacids"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/antacids" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/aspirin"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/aspirin" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/calcium"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/calcium" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/doxylamine"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/doxylamine" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/folicAcid"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/folicAcid" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/iron"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/iron" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/magnesium"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/magnesium" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/metoclopramide"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/metoclopramide" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/vitaminA"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/vitaminA" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/analgesic"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/analgesic" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/antiConvulsive"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/antiConvulsive" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/antiDiabetic"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/antiDiabetic" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/anthelmintic"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/anthelmintic" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/antiHypertensive"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/antiHypertensive" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/antiMalarials"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/antiMalarials" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/antivirals"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/antivirals" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/antiretrovirals"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/antiretrovirals" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/antitussive"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/antitussive" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/asthma"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/asthma" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/contrimoxazole"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/contrimoxazole" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/otherAntibiotics"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/otherAntibiotics" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/hematinic"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/hematinic" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/hemorrhoidalMedication"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/hemorrhoidalMedication" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/multivitamin"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/multivitamin" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/thyroidMedication"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/thyroidMedication" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/otherMedicationCheck"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:tag="otherMedicationCheck"
+                    android:text="@string/otherSpecificComplaint" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/otherMedication"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/specify"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/psychologicalSymptomsView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/psychologicalSymptomsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/titleStyle"
+                android:text="@string/psychologicalSymptoms"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                style="@style/formStyle"
+                android:id="@+id/psychologicalSymptoms"
+                android:layout_below="@+id/psychologicalSymptomsTitle">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/anyPsychologicalSymptoms"/>
+                <LinearLayout
+                    android:id="@+id/psychologicalSymptomsCheckView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/psychologicalSymptomsNone"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/none" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/nauseaVomiting"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/nauseaVomiting" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/heartburn"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/heartburn" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/legCramps"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/legCramps" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/constipation"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/constipation" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/lowBackPain"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:tag="lowBackPain"
+                        android:text="@string/lowBackPain" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/pelvicPain"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:tag="pelvicPain"
+                        android:text="@string/pelvicPain" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/varicoseVeins"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:tag="varicoseVeins"
+                        android:text="@string/varicoseVeins" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/oedema"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:tag="oedema"
+                        android:text="@string/oedema" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lowBackPainSymptomsView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/otherSymptomsBackPain"/>
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/lowBackPainNone"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/none" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/lowBackPainContractions"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/contractions" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/dysuria"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/dysuria" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/extremePelvicPain"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/extremePelvicPain" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/varicoseVeinsSymptomsView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/otherSymptomsVaricose"/>
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/varicoseVeinsOtherNone"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/none" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/varicoseVeinsLegPain"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/legPain" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/varicoseVeinsLegRedness"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/legRedness" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/otherSymptoms"/>
+                <LinearLayout
+                    android:id="@+id/otherSymptomsView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/abnormalVaginalDischarge"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/abnormalVaginalDischarge" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/breathingDifficulty"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/breathingDifficulty" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/breathless"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/breathless" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cough3weeks"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/cough3weeks" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/fever"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/fever" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/tiredEasily"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/tiredEasily" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/headache"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/headache" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/vaginalBleeding"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/vaginalBleeding" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/vaginalDischarge"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/vaginalDischarge" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/visualDisturbance"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/visualDisturbance" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/otherSymptomsLabel"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:tag="otherSymptomsCheck"
+                        android:text="@string/otherMedication" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/specify"
+                        android:visibility="gone"
+                        android:id="@+id/otherSymptoms" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/formStyle"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/previous"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="25dp"
+                android:layout_alignParentLeft="true"
+                android:text="@string/previous"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/next"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_alignParentRight="true"
+                android:text="@string/next"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

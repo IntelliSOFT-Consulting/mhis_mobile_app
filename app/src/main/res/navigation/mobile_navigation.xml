@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.intellisoftkenya.android.mhis.ui.components.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.intellisoftkenya.android.mhis.ui.components.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.intellisoftkenya.android.mhis.ui.components.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_registration"
+        android:name="com.intellisoftkenya.android.mhis.ui.components.registration.RegistrationFragment"
+        android:label="@string/registration"
+        tools:layout="@layout/fragment_registration" />
+
+    <fragment
+        android:id="@+id/nav_quick_check"
+        android:name="com.intellisoftkenya.android.mhis.ui.components.quickcheck.QuickCheckFragment"
+        android:label="@string/quickCheck"
+        tools:layout="@layout/fragment_quick_check" />
+
+    <fragment
+        android:id="@+id/nav_contact"
+        android:name="com.intellisoftkenya.android.mhis.ui.components.contact.ContactFragment"
+        android:label="@string/contact"
+        tools:layout="@layout/fragment_contact" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.intellisoftkenya.android.mhis.ui.components.profile.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_tests"
+        android:name="com.intellisoftkenya.android.mhis.ui.components.tests.TestsFragment"
+        android:label="@string/test"
+        tools:layout="@layout/fragment_tests" />
+
+    <fragment
+        android:id="@+id/nav_counselling"
+        android:name="com.intellisoftkenya.android.mhis.ui.components.counselling.CounsellingFragment"
+        android:label="@string/counselling"
+        tools:layout="@layout/fragment_counselling" />
+
+    <fragment
+        android:id="@+id/nav_symptoms"
+        android:name="com.intellisoftkenya.android.mhis.ui.components.symptoms.SymptomsFragment"
+        android:label="@string/symptoms"
+        tools:layout="@layout/fragment_symptoms" />
+
+    <fragment
+        android:id="@+id/nav_physical_exam"
+        android:name="com.intellisoftkenya.android.mhis.ui.components.physicalexam.PhysicalExamFragment"
+        android:label="@string/physicalExam"
+        tools:layout="@layout/fragment_physical_exam" />
+
+    <fragment
+        android:id="@+id/nav_client_list"
+        android:name="com.intellisoftkenya.android.mhis.ui.components.clientList.ClientListFragment"
+        android:label="@string/clientList"
+        tools:layout="@layout/fragment_client_list" />
+
+</navigation>

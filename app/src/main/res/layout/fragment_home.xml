@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_gravity="center">
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:inputType="text"
+        android:padding="5dp"
+        android:background="@drawable/edit_text_rounded_border"
+        android:hint="@string/search"
+        android:imeOptions="actionSearch"
+        android:imeActionId="3" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:contentPaddingLeft="10dp"
+        app:cardElevation="10dp">
+        <RelativeLayout
+            android:id="@+id/alertView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+            <ImageView
+                android:id="@+id/clinetInfoIndicator"
+                android:layout_height="20dp"
+                android:layout_width="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/outline_info_24" />
+            <TextView
+                android:id="@+id/clientsExpected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/clinetInfoIndicator"
+                android:text="2 clients expected today" />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

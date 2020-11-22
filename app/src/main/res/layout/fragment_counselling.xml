@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.components.counselling.CounsellingFragment">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/referralView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <TextView
+                android:id="@+id/referralTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/titleStyle"
+                android:text="@string/hospitalReferral" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                style="@style/formStyle"
+                android:layout_below="@+id/referralTitle">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/referred" />
+                <RadioGroup
+                    android:id="@+id/hospitalReferral"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/referredYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/referredNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no" />
+                </RadioGroup>
+                <LinearLayout
+                    android:id="@+id/noReferralReasonView"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/reason" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/reasonRefused"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/refused"
+                        />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/notNecessary"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/notNecessary"
+                        />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/referredOtherCheck"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:tag="referredOtherCheck"
+                        android:text="@string/otherSpecify"
+                        />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/referredOther"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/specify"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/dietCounsellingView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/dietCounsellingTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/titleStyle"
+                android:text="@string/dietCounselling" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/formStyle"
+                android:orientation="vertical"
+                android:layout_below="@+id/dietCounsellingTitle">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/healthyAlert" />
+                <RadioGroup
+                    android:id="@+id/healthEatingGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/healthEatingDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/done" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/healthEatingNotDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notDone" />
+                </RadioGroup>
+                <LinearLayout
+                    android:id="@+id/dietNotDoneView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/formStyle"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/dietCounsellingTitle">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/reasonTitle" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/referredInstead"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/referredInstead"
+                        />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/otherReasonCheck"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:tag="otherReasonCheck"
+                        android:text="@string/otherSpecify"
+                        />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/otherReason"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/specify"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/counsellingView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/counsellingTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/titleStyle"
+                android:text="@string/counselling" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/formStyle"
+                android:layout_below="@+id/counsellingTitle"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/seekingCare" />
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/seekingCareDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/done" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/seekingCareNotDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notDone" />
+                </RadioGroup>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/goingHospital" />
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/goingHospitalDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/done" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/goingHospitalNotDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notDone" />
+                </RadioGroup>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/ancContact" />
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/ancContactDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/done" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/ancContactNotDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notDone" />
+                </RadioGroup>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/birthPreparedness" />
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/birthPreparednessDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/done" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/birthPreparednessNotDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notDone" />
+                </RadioGroup>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/plannedBirthPlace" />
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/facility"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/facility" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/facilityCSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/facilityCSection" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/home"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/other"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/otherSpecify" />
+                </RadioGroup>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/postpartum" />
+                <RadioGroup
+                    android:id="@+id/postpartumFPView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/postpartumDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/done" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/postpartumNotDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notDone" />
+                </RadioGroup>
+                <LinearLayout
+                    android:id="@+id/fpMethodView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/postpartum" />
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/oralContraceptive"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/oralContraceptive" />
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/injectable"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/injectable" />
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/implant"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/implant" />
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/uid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/iud" />
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/vaginalRing"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vaginalRing" />
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/tubalLigation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tubalLigation" />
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/sterilization"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sterilization" />
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/fpNone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/none" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/ipvView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/ipvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/titleStyle"
+                android:text="@string/ipvLabel" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                style="@style/formStyle"
+                android:layout_below="@+id/ipvTitle">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/ipv" />
+                <RadioGroup
+                    android:id="@+id/ipvCheckGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/ipvDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/done" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/ipvNotDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notDone" />
+                </RadioGroup>
+                <LinearLayout
+                    android:id="@+id/ipvEnquiryResultsView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/ipvResults" />
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/ipvTreated"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ipvTreated" />
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/ipvReferred"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ipvReferred" />
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/noActionNecessary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/noActionNecessary" />
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/ipvOther"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ipvOther" />
+                    </RadioGroup>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ipvNotDoneView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/reasonTitle" />
+                    <RadioGroup
+                        android:id="@+id/ipvNotDoneGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/ipvReferredInstead"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/referredInstead" />
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/ipvOtherSpecify"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/otherSpecify" />
+                    </RadioGroup>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/specify"
+                        android:visibility="gone"
+                        android:id="@+id/ipvReasonOther" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/recommendationView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/recommendationTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/titleStyle"
+                android:text="@string/notRecommendedLabel" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/formStyle"
+                android:layout_below="@+id/recommendationTitle"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notRecommended" />
+
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/formStyle"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/previous"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="25dp"
+                android:layout_alignParentLeft="true"
+                android:text="@string/previous"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/next"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_alignParentRight="true"
+                android:text="@string/next"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

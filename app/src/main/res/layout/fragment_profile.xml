@@ -1,0 +1,1271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.components.profile.ProfileFragment">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/demographicView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <TextView
+                android:id="@+id/demographic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/titleStyle"
+                android:text="@string/demographicInfo" />
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                style="@style/formStyle"
+                android:layout_below="@+id/demographic">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/educationLevel" />
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/levelNone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/none" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/levelUnknown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dontKnow" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/primary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/primary" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/secondary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/secondary" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/higher"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/higher" />
+                </RadioGroup>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/maritalStatus" />
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/married"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/married" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/divorcedSeparated"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/divorcedSeparated" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/neverMarried"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/neverMarried" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/widowed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/widowed" />
+                </RadioGroup>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/occupation" />
+                <LinearLayout
+                    android:id="@+id/occupationChecks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/student"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/student" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/unemployed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/unemployed" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/formal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/formalEmployment" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/informalSexWorker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/informalEmploymentSW" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/informalOther"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/informalEmploymentO" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/employmentOtherCheck"
+                        android:layout_width="match_parent"
+                        android:tag="employmentOtherCheck"
+                        android:layout_height="wrap_content"
+                        android:text="@string/otherSpecify" />
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:hint="@string/specify"
+                    android:id="@+id/employmentOther" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/pregnancyView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/pregnancyTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/titleStyle"
+                android:textFontWeight="600"
+                android:text="@string/currentPregnancy" />
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                style="@style/formStyle"
+                android:layout_below="@+id/pregnancyTitle">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/lmpKnown" />
+                <RadioGroup
+                    android:id="@+id/lpmKnownGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/lmpKnownYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/lmpKnownNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no" />
+                </RadioGroup>
+                <LinearLayout
+                    android:id="@+id/lpmDateView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/specifyDate" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/lmpDate"
+                        android:clickable="true"
+                        android:inputType="none"
+                        android:focusable="false"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:hint="@string/specifyDate"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/ultrasoundDone" />
+                <RadioGroup
+                    android:id="@+id/ultraSoundDone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/ultrasoundDoneYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/ultrasoundDoneNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no" />
+                </RadioGroup>
+                <LinearLayout
+                    android:id="@+id/ultraSoundDetailsView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/specifyDate" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ultraSoundDate"
+                        android:clickable="true"
+                        android:inputType="none"
+                        android:focusable="false"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:hint="@string/specifyDate"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/gaWeeks" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/gaWeeks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/gaWeeks"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/gaDays" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/gaDays"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/gaDays"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/preferredGestationalAge" />
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/lmp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lmp" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/ultrasound"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ultrasound" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/sfh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sfh" />
+                </RadioGroup>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/obstetricHistoryView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/obstetricHistoryTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/titleStyle"
+                android:text="@string/obstetricHistory" />
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                style="@style/formStyle"
+                android:layout_below="@+id/obstetricHistoryTitle">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/noPregnancies" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/noPregnancies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+                <LinearLayout
+                    android:id="@+id/noPregnanciesLostView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/noPregnanciesLostEnded" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/noPregnanciesLostEnded"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/noLiveBirthView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/noLiveBirths" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/noLiveBirth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+                    <LinearLayout
+                        android:id="@+id/pretermView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/questionLabelStyle"
+                            android:text="@string/preterm" />
+                        <com.google.android.material.checkbox.MaterialCheckBox
+                            android:id="@+id/pretermYes"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="@string/yes" />
+                        <com.google.android.material.checkbox.MaterialCheckBox
+                            android:id="@+id/pretermNo"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="@string/no" />
+                        <com.google.android.material.checkbox.MaterialCheckBox
+                            android:id="@+id/pretermDoNotKnow"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="@string/dontKnow" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/noStillBirthView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/noStillBirths" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/noStillBirth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/noCSectionView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/noCSections" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/noCSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/pregnancyProblemsView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/pastProblems" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/pregnancyProblemsNone"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/none" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/pregnancyProblemsDoNotKnow"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/dontKnow" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/preEclampsia"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/preEclampsia" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/eclampsia"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/eclampsia" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/convulsions"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/convulsions" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/gestationalDiabetes"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/gestationalDiabetes" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/tobaccoUse"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/tobaccoUse" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/alcoholUse"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/alcoholUse" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/substanceUse"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/substanceUse" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/heavyBleeding"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/heavyBleeding" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/babyDied"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/babyDied" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/macrosomia"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/macrosomia" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/forceps"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/forceps" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/tear"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/tear" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/otherProblemCheck"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/otherSpecify" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/otherProblem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/specify"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/medicalHistoryView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/medicalHistoryTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/titleStyle"
+                android:text="@string/medicalHistory" />
+            <TextView
+                android:id="@+id/allergiesLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/questionLabelStyle"
+                android:layout_below="@+id/medicalHistoryTitle"
+                android:text="@string/allergies" />
+            <LinearLayout
+                android:id="@+id/allergiesView"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                style="@style/formStyle"
+                android:layout_below="@+id/allergiesLabel">
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/allergyNone"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/none" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/allergyUnknown"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/dontKnow" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/albendazole"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/albendazole" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/aluminiumHydroxide"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/aluminiumHydroxide" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/calcium"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/calcium" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/chamomile"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/chamomile" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/folicAcid"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/folicAcid" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/ginger"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/ginger" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/iron"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/iron" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/magnesiumCarbonate"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/magnesiumCarbonate" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/malaria"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/malaria" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/mebendazile"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/mebendazole" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/penicillin"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/penicillin" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/prep"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/prep" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/otherAllergyCheck"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:tag="otherAllergyCheck"
+                    android:text="@string/otherSpecify" />
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/otherAllergy"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/allergiesView"
+                android:visibility="gone"
+                android:hint="@string/specify"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/surgeryLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/questionLabelStyle"
+                android:layout_below="@+id/otherAllergy"
+                android:text="@string/surgeries" />
+            <LinearLayout
+                android:id="@+id/surgeriesView"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                style="@style/formStyle"
+                android:layout_below="@+id/surgeryLabel">
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/surgeryNone"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/none" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/surgeryUnknown"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/dontKnow" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/dilationCurettage"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/dilationCurettage" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/myomectomy"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/myomectomy" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/ovarianCystsRemoval"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/ovarianCystsRemoval" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/oophorectomy"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/oophorectomy" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/salpingectomy"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/salpingectomy" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/cervicalCone"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/cervicalCone" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/otherProceduresCheck"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:tag="otherProceduresCheck"
+                    android:text="@string/otherProcedures" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/otherProcedures"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:hint="@string/specify" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/otherSurgeriesCheck"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:tag="otherSurgeriesCheck"
+                    android:text="@string/otherSurgeries" />
+
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/otherSurgeries"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/surgeriesView"
+                android:hint="@string/specify"
+                android:visibility="gone"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/conditionLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/questionLabelStyle"
+                android:layout_below="@+id/otherSurgeries"
+                android:text="@string/anyCondition" />
+            <LinearLayout
+                android:id="@+id/conditionsView"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                style="@style/formStyle"
+                android:layout_below="@+id/conditionLabel">
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/conditionNone"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/none" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/conditionUnknown"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/dontKnow" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/autoImmune"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/autoImmune" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/bloodDisorder"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/bloodDisorder" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/cancer"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/cancer" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/diabetes"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/diabetes" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/epilepsy"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/epilepsy" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/hiv"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/hiv" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/hypertension"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/hypertension" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/kidneyDisease"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/kidneyDisease" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/otherConditionCheck"
+                    android:layout_height="wrap_content"
+                    android:tag="otherConditionCheck"
+                    android:layout_width="match_parent"
+                    android:text="@string/otherSpecify" />
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/otherCondition"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/conditionsView"
+                android:visibility="gone"
+                android:hint="@string/specify"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/immunizationView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/immunizationTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/titleStyle"
+                android:text="@string/immunizationStatus" />
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                style="@style/formStyle"
+                android:layout_below="@+id/immunizationTitle">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/ttImmunizationStatus" />
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/ttv3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ttvc3" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/tt14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ttvc14" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/ttvcNotReceived"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ttvcNotReceived" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/ttUnknown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/unknown" />
+                </RadioGroup>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/fluImmunizationStatus" />
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/seasonalGiven"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/seasonalGiven" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/seasonalMissing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/seasonalMissing" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/fluUnknown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/unknown" />
+                </RadioGroup>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/medicationView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/medicationTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/titleStyle"
+                android:text="@string/medicationTitle" />
+            <LinearLayout
+                android:id="@+id/currentmedicationView"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                style="@style/formStyle"
+                android:layout_below="@+id/medicationTitle">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/currentMedication" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/medicationNone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/none" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/medicationUnknown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dontKnow" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/antacids"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/antacids" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/aspirin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/aspirin" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/medicationCalcium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/calcium" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/doxylamine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/doxylamine" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/medicationFolicAcid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/folicAcid" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/medicationIron"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/iron" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/medicationMagnesium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/magnesium" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/metoclopramide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/metoclopramide" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/vitaminA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vitaminA" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/analgesic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/analgesic" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/antiConvulsive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/antiConvulsive" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/antiDiabetic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/antiDiabetic" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/anthelmintic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/anthelmintic" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/antiHypertensive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/antiHypertensive" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/antiMalarials"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/antiMalarials" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/antivirals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/antivirals" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/antiretrovirals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/antiretrovirals" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/antitussive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/antitussive" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/asthma"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/asthma" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/contrimoxazole"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contrimoxazole" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/otherAntibiotics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/otherAntibiotics" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/hematinic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hematinic" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/hemorrhoidalMedication"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hemorrhoidalMedication" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/multivitamin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/multivitamin" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/thyroidMedication"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/thyroidMedication" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/otherMedicationCheck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="otherMedicationCheck"
+                    android:text="@string/otherSpecify" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/otherMedication"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/behaviourView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/behaviourTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/titleStyle"
+                android:text="@string/behaviour" />
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                style="@style/formStyle"
+                android:orientation="vertical"
+                android:layout_below="@+id/behaviourTitle">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/caffeineIntake" />
+                <LinearLayout
+                    android:id="@+id/caffeineView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/coffee"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/coffee" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/espresso"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/espresso" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/instant"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/instant" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/chocolate"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/chocolate" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/noneAbove"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/noneAbove" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/userTobacco" />
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/tobaccoYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/tobaccoNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/tobaccoQuit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/recentlyQuit" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/anyoneSmokes" />
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/houseSmokesYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/houseSmokesNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/usesCondoms" />
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/condomYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/condomNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/clinicalEnquiry" />
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/clinicalEnquiryYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/clinicalEnquiryNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/usesAlcoholOther" />
+                <LinearLayout
+                    android:id="@+id/alcoholSubstanceView"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/alcoholNone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/none" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/alcohol"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/alcohol" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/marijuana"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/marijuana" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cocaine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cocaine" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/injectableDrugs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/injectableDrugs" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/otherSubstanceCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="otherSubstanceCheck"
+                        android:text="@string/otherSpecify" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/otherSubstance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/specify"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/partnerView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/partnerTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/titleStyle"
+                android:text="@string/partnersHIV" />
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                style="@style/formStyle"
+                android:layout_below="@+id/partnerTitle">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/partnersHIV" />
+                <RadioGroup
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    >
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/partnerHIVDoNotKnow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dontKnow" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/partnerHIVPositive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/positive" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/partnerHIVNegative"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/negative" />
+                </RadioGroup>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/formStyle"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/previous"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="25dp"
+                android:layout_alignParentLeft="true"
+                android:text="@string/previous"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/next"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_alignParentRight="true"
+                android:text="@string/next"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</ScrollView>

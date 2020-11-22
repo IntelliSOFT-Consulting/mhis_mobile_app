@@ -1,0 +1,450 @@
+<resources>
+    <string name="app_name">MHIS</string>
+    <string name="usernameLabel">Username</string>
+    <string name="passwordLabel">Password</string>
+    <string name="signInLabel">Signin</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <!-- Home screen texts -->
+    <string name="search">Search</string>
+
+    <!-- -->
+    <string name="save">Save</string>
+    <!-- -->
+    <string name="registration">Registration</string>
+    <string name="patientId">ID</string>
+    <string name="firstName">First name</string>
+    <string name="lastName">Last name</string>
+    <string name="dob">Date of birth</string>
+    <string name="age">Age</string>
+    <string name="homeAddress">Home address</string>
+    <string name="phoneNumber">Phone number</string>
+    <string name="alternateContact">Alternate contact</string>
+    <string name="alternateContactPhone">Alternate contact Phone number</string>
+
+    <!-- Quick check -->
+    <string name="reason">Reason for coming to facility</string>
+    <string name="firstContact">First contact</string>
+    <string name="scheduledContact">Scheduled contact</string>
+    <string name="specificComplaint">Specific complaint</string>
+
+    <string name="specificComplaints">Specific complaint(s)</string>
+    <string name="abnormalVaginalDischarge">Abnormal vaginal discharge</string>
+    <string name="Jaundice">Jaundice</string>
+    <string name="changesInBloodPressure">Changes in blood pressure</string>
+    <string name="constipation">Constipation</string>
+    <string name="contractions">Contractions</string>
+    <string name="cough">Cough</string>
+    <string name="depression">Depression</string>
+    <string name="anxiety">Anxiety</string>
+    <string name="dizziness">Dizziness</string>
+    <string name="domesticViolence">Domestic violence</string>
+    <string name="extremePelvicPain">Extreme pelvic pain - can\'t walk (symphasis pubis dysfunction)</string>
+    <!-- fever -->
+    <string name="fullAbdominalPain">Full abdominal pain</string>
+    <string name="fluSymptoms">Flu symptoms</string>
+    <string name="fluidLoss">Fluid loss</string>
+    <string name="headache">Headache</string>
+    <string name="heartburn">Heartburn</string>
+    <string name="legCramps">Leg cramps</string>
+    <string name="legPain">Leg pain</string>
+    <string name="legRedness">Leg redness</string>
+    <string name="lowBackPain">Low back pain</string>
+    <string name="pelvicPain">Pelvic pain</string>
+    <string name="nauseaVomitingDiarrhoea">Nausea / Vomiting / Diarrhoea</string>
+    <string name="noFetalMovement">No fetal movement</string>
+    <string name="oedema">Oedema</string>
+    <string name="otherBleeding">Other bleeding</string>
+    <string name="otherPain">Other pain</string>
+    <string name="otherPsychologicalSymptoms">Other psychological symptoms</string>
+    <string name="otherSkinDisorder">Other skin disorder</string>
+    <string name="otherTypesOfViolence">Other types of violence</string>
+    <string name="painDuringUrination">Pain during urination (dysuria)</string>
+    <string name="pruritus">Pruritus</string>
+    <string name="reducedPoorFetalMovement">Reduced or poor fetal movement</string>
+    <string name="shortnessOfBreath">Shortness Of Breath</string>
+    <string name="tiredness">Tiredness</string>
+    <string name="trauma">Trauma</string>
+    <string name="vaginalBleeding">Vaginal bleeding</string>
+    <!-- visual disturbance -->
+    <string name="otherSpecificComplaint">Other (specify)</string>
+    <string name="specify">Specify</string>
+
+
+    <string name="dangerSigns">Danger signs</string>
+    <string name="none">None</string>
+    <string name="bleedingVaginally">Bleeding vaginally</string>
+    <string name="centralCyanosis">Central cyanosis</string>
+    <string name="convulsing">Convulsing</string>
+    <string name="fever">Fever</string>
+    <string name="severeHeadache">Severe headache</string>
+    <string name="visualDisturbance">Visual disturbance</string>
+    <string name="imminentDelivery">Imminent delivery</string>
+    <string name="labour">Labour</string>
+    <string name="looksVeryIll">Looks very ill</string>
+    <string name="severeVomiting">Sever vomiting</string>
+    <string name="severePain">Sever pain</string>
+    <string name="severeAbdominalPain">Sever abdominal pain</string>
+    <string name="unconscious">Unconscious</string>
+
+    <string name="nextContact">Next (Contact)</string>
+    <string name="referral">Refer patient</string>
+
+    <string name="contactIcon">Action icon</string>
+
+    <string name="contact">Contact</string>
+    <string name="quickCheck">Quick check</string>
+    <string name="profile">Profile</string>
+    <string name="physicalExam">Physical exam</string>
+    <string name="symptoms">Symptoms</string>
+    <string name="test">Tests</string>
+    <string name="counselling">Counselling</string>
+
+    <string name="medicationFollowup">Medication follow-up</string>
+    <!-- medications -->
+    <string name="medication">What medications (including supplements and vitamins) is she still taking?</string>
+    <string name="dontKnow">Don\'t know</string>
+    <string name="antacids">Antacids</string>
+    <string name="aspirin">Aspirin</string>
+    <string name="calcium">Calcium</string>
+    <string name="doxylamine">Doxylamine</string>
+    <string name="folicAcid">Folic acid</string>
+    <string name="iron">Iron</string>
+    <string name="magnesium">Magnesium</string>
+    <string name="metoclopramide">Metoclopramide</string>
+    <string name="vitaminA">Vitamin A</string>
+    <string name="analgesic">Analgesic</string>
+    <string name="antiConvulsive">Anti-convulsive</string>
+    <string name="antiDiabetic">Anti-diabetic</string>
+    <string name="anthelmintic">Anthelmintic</string>
+    <string name="antiHypertensive">Anti-hypertensive</string>
+    <string name="antiMalarials">Anti-malarials</string>
+    <string name="antivirals">Antivirals</string>
+    <string name="antiretrovirals">Antiretrovirals</string>
+    <string name="antitussive">Antitussive</string>
+    <string name="asthma">Asthma</string>
+    <string name="contrimoxazole">Contrimoxazole</string>
+    <string name="otherAntibiotics">Other antibiotics</string>
+    <string name="hematinic">Hematinic</string>
+    <string name="hemorrhoidalMedication">Hemorrhoidal medication</string>
+    <string name="multivitamin">Multivitamin</string>
+    <string name="thyroidMedication">Thyroid medication</string>
+    <string name="otherMedication">Other (specify)</string>
+
+    <string name="psychologicalSymptoms">Psychological symptoms?</string>
+    <string name="anyPsychologicalSymptoms">Any psychological symptoms?</string>
+    <string name="nauseaVomiting">Nausea and vomiting</string>
+    <string name="heartBurn">Heartburn</string>
+    <!-- <string name="legCramps">Leg cramps</string> -->
+    <!-- <string name="constipation">Leg cramps</string> -->
+    <!-- <string name="lowBackPain">Leg cramps</string> -->
+    <!-- <string name="pelvicPain">Leg cramps</string> -->
+    <string name="varicoseVeins">Varicose veins</string>
+    <string name="dysuria">Pain during urination (dysuria)</string>
+    <!-- Other symptoms -->
+    <string name="otherSymptoms">Any other symptoms</string>
+    <string name="otherSymptomsBackPain">Any other symptoms related to low back pain and pelvic pain?</string>
+    <string name="otherSymptomsVaricose">Any other symptoms related to varicose veins or oedema?</string>
+    <!-- <string name="abnormalVaginalDischarge">Any other symptoms</string> -->
+    <string name="breathingDifficulty">Breathing difficulty</string>
+    <string name="breathless">Breathless during routine activities</string>
+    <string name="cough3weeks">Cough lasting more than 3 weeks</string>
+    <!-- <string name="fever">Cough lasting more than 3 weeks</string> -->
+    <string name="tiredEasily">Gets tired easily</string>
+    <!-- <string name="headache">Headache tired easily</string> -->
+    <!-- <string name="vaginalBleeding">Headache tired easily</string> -->
+    <string name="vaginalDischarge">Vaginal discharge</string>
+    <!-- <string name="visualDisturbance">Vaginal discharge</string> -->
+
+    <!-- Physical exam -->
+    <string name="heightWeight">Height &amp; Weight</string>
+    <string name="height">Height (cm)</string>
+    <string name="preGestationalWeight">Pre-gestational weight (kg)</string>
+    <string name="preGestationalWeightUnknown">Pre-gestational weight unknown</string>
+    <string name="currentWeight">Current weight (kg)</string>
+
+    <string name="bmi">Body mass index (BMI) = ${bmi} Woman is ${weight}. Weight gain during pregnancy should be 11.5 -16 kg </string>
+    <string name="weightGain">Average weight gain per week since last contact: ${weight} kg. Total weight gain in pregnancy so far: ${gain} kg</string>
+    <string name="healthyAlert">Healthy eating and keeping physically active counselling</string>
+
+    <!-- Blood pressure -->
+    <string name="bloodPressure">Blood pressure</string>
+    <string name="systolic">Systolic blood pressure - SBP (mmHg)</string>
+    <string name="diastolic">Diastolic blood pressure - DBP (mmHg)</string>
+    <string name="unableToRecordBP">Unable to record BP</string>
+    <string name="bpCuffBroken">BP cuff (sphygmomanometer) not available</string>
+    <string name="bpCuffNotAvailable">BP cuff (sphygmomanometer) is broken</string>
+    <string name="other">Other</string>
+
+    <!-- Maternal exam-->
+    <string name="maternalExam">Maternal exam</string>
+    <string name="temperature">Temperature</string>
+    <string name="pulseRate">Pulse rate (bpm)</string>
+    <string name="pallorPresent">Pallor present?</string>
+    <string name="respiratoryExam">Respiratory exam</string>
+    <string name="notDone">Not done</string>
+    <string name="normal">Normal</string>
+    <string name="abnormal">Abnormal</string>
+    <string name="oximetry">Oximetry (%)</string>
+    <string name="dyspnoea">Dyspnoea</string>
+    <string name="rapidBreathing">Rapid breathing</string>
+    <string name="slowBreathing">Slow breathing</string>
+    <string name="wheezing">Wheezing</string>
+    <string name="rales">Rales</string>
+    <string name="cardiacExam">Cardiac exam</string>
+    <string name="cardiacExamAbnormal">Cardiac exam: abnormal</string>
+    <string name="heartMurmur">Heart murmur</string>
+    <string name="weakPulse">Weak pulse</string>
+    <string name="tachycardia">Tachycardia</string>
+    <string name="bradycardia">Bradycardia</string>
+    <string name="arrhythmia">Arrhythmia</string>
+    <string name="cyanosis">Cyanosis</string>
+    <string name="coldSweats">Cold sweats</string>
+    <string name="breastExam">Breast exam</string>
+    <string name="breastExamAbnormal">Breast exam: abnormal</string>
+    <string name="nodule">Nodule</string>
+    <string name="discharge">Discharge</string>
+    <string name="flushing">Flushing</string>
+    <string name="localPain">Local pain</string>
+    <string name="bleeding">Bleeding</string>
+    <string name="increasedTemperature">Increased temperature</string>
+    <string name="abdominalExam">Abdominal exam</string>
+    <string name="abdominalExamAbnormal">Abdominal exam: abnormal</string>
+    <string name="massTumor">Mass/tumor</string>
+    <string name="superficialPalpation">Pain on superficial palpation</string>
+    <string name="deepPalpation">Pain on deep palpation</string>
+    <string name="painfulDecompression">Painful decompression</string>
+    <string name="pelvicExam">Pelvic exam (visual)</string>
+    <string name="pelvicExamAbnormal">Pelvic exam : abnormal</string>
+    <!--<string name="abnormalVaginalDischarge">Pelvic exam : abnormal</string> -->
+    <string name="amnioticFluid">Evidence of amniotic fluid</string>
+    <string name="foulDischarge">Foul-smelling vaginal discharge</string>
+    <string name="erythematousPapules">Clusters of erythematous papules</string>
+    <string name="vesicles">Vesicles</string>
+    <string name="genitalUlcer">Genital ulcer</string>
+    <string name="genitalPain">Genital pain</string>
+    <string name="inguinal">Tender bilateral inguinal and femoral lymphadenopathy</string>
+    <string name="cervicalFriability">Cervical friability</string>
+    <string name="mucopurulentCervicitis">Mucopurulent cervicitis</string>
+    <string name="unilateral">Tender unilateral lymphadenopathy</string>
+    <string name="curdLikeVaginalDischarge">Curd-like vaginal discharge</string>
+
+    <string name="cervicalExam">Cervical exam done?</string>
+    <string name="dilation">How many centimetres (cm) dilated?</string>
+    <string name="oedemaPresent">Oedema present?</string>
+    <string name="oedemaType">Oedema type</string>
+    <string name="pittingAnkle">Pitting ankle oedema</string>
+    <string name="handsAndFeet">Oedema of the hands and feet</string>
+    <string name="pittingLowerBack">Pitting lower back oedema</string>
+    <string name="legSwelling">Leg swelling</string>
+    <string name="oedemaSeverity">Oedema severity</string>
+
+    <string name="fetalAssessment">Fetal assessment</string>
+    <string name="symphysis">Symphysis-fundal height (SFH) in centimetres (cm)</string>
+    <string name="fetalHeartBeat">Fetal heartbeat present?</string>
+    <string name="fetalHeartRate">Fetal heart rate (bpm)</string>
+    <string name="noFetuses">No of fetuses</string>
+    <string name="noFetusesUnknown">No of fetuses unknown</string>
+
+    <string name="testDue">Tests due</string>
+    <string name="ultrasoundTest">Ultrasound Test</string>
+    <string name="bloodType">Blood type test</string>
+    <string name="syphilisTest">Syphilis test</string>
+    <string name="urineTest">Urine test</string>
+    <string name="bloodHeamoglobinTest">Blood haemoglobin test</string>
+    <string name="bloodGlucoseTest">Blood glucose test</string>
+    <string name="otherTest">Other glucose test</string>
+    <string name="otherTestDoneToday">Done today</string>
+    <string name="otherTestDoneEarlier">Done today</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <!-- profile strings -->
+    <string name="demographicInfo">Demographic info</string>
+    <string name="educationLevel">Highest level of school</string>
+    <string name="primary">Primary</string>
+    <string name="secondary">Secondary</string>
+    <string name="higher">Higher</string>
+
+    <string name="maritalStatus">Marital status</string>
+    <string name="married">Married or living together</string>
+    <string name="divorcedSeparated">Divorced/Separated</string>
+    <string name="neverMarried">Never married and never lived together (single)</string>
+    <string name="widowed">Widowed</string>
+
+    <string name="occupation">Occupation</string>
+    <string name="student">Student</string>
+    <string name="unemployed">Unemployed</string>
+    <string name="formalEmployment">Formal employment</string>
+    <string name="informalEmploymentSW">informal employment (sex worker)</string>
+    <string name="informalEmploymentO">informal employment (other)</string>
+
+
+    <string name="currentPregnancy">Current pregnancy</string>
+    <string name="lmpKnown">LMP Known</string>
+    <string name="lmpDate">LMP date</string>
+    <string name="ultrasoundDone">Ultrasound done?</string>
+    <string name="gaWeeks">GA from ultrasound - weeks</string>
+    <string name="gaDays">GA from ultrasound - days</string>
+    <string name="preferredGestationalAge">Select Preferred gestational age</string>
+    <string name="lmp">Using LMP</string>
+    <string name="ultrasound">Using ultrasound</string>
+    <string name="sfh">Using SFH or abdominal palpation</string>
+
+    <string name="obstetricHistory">Obstetric history</string>
+    <string name="noPregnancies">No. of pregnancies (including this pregnancy)</string>
+    <string name="noPregnanciesLostEnded">No. of pregnancies lost/ended (before 22 weeks / 5 months)</string>
+    <string name="noLiveBirths">No. of live births (after 22 weeks)</string>
+    <string name="noStillBirths">No. of stillbirths (after 22 weeks)</string>
+    <string name="preterm">Was the last live birth preterm (less than 37 weeks)</string>
+    <string name="noCSections">No. of C-sections</string>
+    <string name="pastProblems">Any past pregnancy problems?</string>
+    <string name="preEclampsia">Pre-eclampsia</string>
+    <string name="eclampsia">Eclampsia</string>
+    <string name="convulsions">Convulsions</string>
+    <string name="gestationalDiabetes">Gestational Diabetes</string>
+    <string name="tobaccoUse">Tobacco use</string>
+    <string name="alcoholUse">Alcohol use</string>
+    <string name="substanceUse">Substance use</string>
+    <string name="heavyBleeding">Heavy bleeding (during or after delivery)</string>
+    <string name="babyDied">Baby died within 24 hours of delivery</string>
+    <string name="macrosomia">Macrosomia</string>
+    <string name="forceps">Forceps or vacuum delivery</string>
+    <string name="tear">3rd or 4th degree tear</string>
+
+    <string name="medicalHistory">Medical history</string>
+    <string name="allergies">Any allergies?</string>
+    <string name="albendazole">Albendazole</string>
+    <string name="aluminiumHydroxide">Aluminium hydroxide</string>
+    <!--<string name="calcium">calcium</string> -->
+    <string name="chamomile">Chamomile</string>
+    <!--<string name="folicAcid">Folic acid</string> -->
+    <string name="ginger">Ginger</string>
+    <!--<string name="iron">Iron</string>-->
+    <string name="magnesiumCarbonate">Magnesium carbonate</string>
+    <string name="malaria">Malaria medication (sulphadoxine-pyrimethamine)</string>
+    <string name="mebendazole">Mebendazole</string>
+    <string name="penicillin">Penicillin</string>
+    <string name="prep">PrEP tenofovir disoproxil fumarate (TDF)</string>
+
+    <string name="surgeries">Any surgeries?</string>
+    <string name="dilationCurettage">Dilation and curettage</string>
+    <string name="myomectomy">Removal of fibroids (myomectomy)</string>
+    <string name="ovarianCystsRemoval">Removal of ovarian cysts</string>
+    <string name="oophorectomy">Removal of ovary</string>
+    <string name="salpingectomy">Removal of the tube</string>
+    <string name="cervicalCone">Partial removal of the cervix</string>
+    <string name="otherProcedures">Other gynacological procedues(Specify)</string>
+    <string name="otherSurgeries">Other surgeries (Specify)</string>
+
+    <string name="anyCondition">Any chronic of past health conditions?</string>
+    <string name="autoImmune">Autoimmune disease?</string>
+    <string name="bloodDisorder">Blood disorder (e.g sickle cell anemia, thalaseemia)</string>
+    <string name="cancer">Cancer</string>
+    <string name="diabetes">Diabetes</string>
+    <string name="epilepsy">Epilepsy</string>
+    <string name="hiv">HIV</string>
+    <string name="hypertension">Hypertension</string>
+    <string name="kidneyDisease">Kidney disease</string>
+
+    <string name="immunizationStatus">Immunization status</string>
+    <string name="ttImmunizationStatus">TT Immunization status</string>
+    <string name="ttvc3">3 doses of TTVC in past 5 years</string>
+    <string name="ttvc14">1-4 doses of TTVC in past</string>
+    <string name="ttvcNotReceived">TTVC not received</string>
+    <string name="unknown">Unknown</string>
+
+    <string name="fluImmunizationStatus">Flu immunization status</string>
+    <string name="seasonalGiven">Seasonal Flu dose given</string>
+    <string name="seasonalMissing">Seasonal Flu dose missing</string>
+
+    <string name="behaviour">Woman\'s Behaviour</string>
+    <string name="caffeineIntake">Daily caffeine intake</string>
+    <string name="coffee">More than 2 cups (200ml) of filtered or commercially brewed coffee</string>
+    <string name="espresso">More than 2 small cups (50ml) of espresso</string>
+    <string name="instant">More than 3 cups (300ml) of instant coffee</string>
+    <string name="chocolate">More than 48 pieces (squares) of chocolate</string>
+    <string name="noneAbove">None of the above</string>
+    <string name="userTobacco">Uses tobacco products</string>
+    <string name="recentlyQuit">Recently quit</string>
+    <string name="anyoneSmokes">Anyone in the household smokes tobacco products?</string>
+    <string name="usesCondoms">Uses condoms during sex?</string>
+    <string name="clinicalEnquiry">Clinical enquiry for alcohol and other substance use done?</string>
+    <string name="usesAlcoholOther">Uses alcohol and/or other substances?</string>
+    <string name="alcohol">Alcohol</string>
+    <string name="marijuana">Marijuana</string>
+    <string name="cocaine">Cocaine / crack</string>
+    <string name="injectableDrugs">Injectable drugs</string>
+
+    <string name="partnersHIV">Partner\'s HIV status</string>
+    <string name="positive">Positive</string>
+    <string name="negative">Negative</string>
+
+    <string name="hospitalReferral">Hospital referral</string>
+    <string name="referred">Referred to hospital?</string>
+    <!--<string name="reason">Reason</string> -->
+    <string name="refused">Woman refused</string>
+    <string name="notNecessary">Not necessary</string>
+    <string name="dietCounselling">Diet counselling</string>
+    <string name="healthyEating">Healthy eating and keeping physically active counselling?</string>
+    <string name="referredInstead">Referred instead</string>
+    <string name="seekingCare">Seeking care for danger signs counselling</string>
+    <string name="goingHospital">Counselling on going immediately to the hospital if severe danger signs</string>
+    <string name="ancContact">ANC contact schedule counselling</string>
+    <string name="birthPreparedness">Birth preparedness and complications readiness counselling</string>
+    <string name="plannedBirthPlace">Planned birth place</string>
+    <string name="facility">Facility</string>
+    <string name="facilityCSection">Facility (elective C-Section)</string>
+    <string name="home">Home</string>
+    <string name="postpartum">Postpartum family planning counselling</string>
+    <string name="fmMethodLabel">FP method accepted</string>
+    <string name="oralContraceptive">Oral contraceptive</string>
+    <string name="injectable">Injectable</string>
+    <string name="implant">Implant</string>
+    <string name="iud">IUD</string>
+    <string name="vaginalRing">Vaginal ring</string>
+    <string name="tubalLigation">Tubal ligation</string>
+    <string name="sterilization">Sterilization</string>
+
+    <string name="ipvLabel">Intimate partner violence (IPV)</string>
+    <string name="ipv">Clinical enquiry for intimate partner violence  (IPV)</string>
+    <string name="ipvResults">IPV enquiry results</string>
+    <string name="ipvTreated">Treated</string>
+    <string name="ipvReferred">Referred</string>
+    <string name="noActionNecessary">No action necessary</string>
+    <string name="ipvOther">Other</string>
+
+    <string name="notRecommendedLabel">Not recommended</string>
+    <string name="notRecommended">Dietary supplements NOT recommended: \n - High protein supplement
+        \n - Zinc supplement \n - Multiple micronutrient supplement \n -n Viatmin B6 supplement
+        \n - Vitamin C and E supplement \n - Vitamin D supplement</string>
+
+    <string name="done">Done</string>
+    <string name="oedema1">+</string>
+    <string name="oedema2">++</string>
+    <string name="oedema3">+++</string>
+    <string name="oedema4">++++</string>
+
+    <string name="otherSpecify">Other (specify)</string>
+    <string name="medicationTitle">Medication</string>
+    <string name="reasonTitle">Reason</string>
+    <string name="currentMedication">Current Medications</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="clientList">Client list</string>
+    <string name="requiredField">This field is required</string>
+    <string name="specifyDate">Specify date</string>
+
+</resources>

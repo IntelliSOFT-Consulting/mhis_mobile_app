@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.components.physicalexam.PhysicalExamFragment">
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/view">
+        <RelativeLayout
+            android:id="@+id/heightWeightView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <TextView
+                android:id="@+id/heightWeightTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/titleStyle"
+                android:text="@string/heightWeight" />
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                style="@style/formStyle"
+                android:layout_below="@+id/heightWeightTitle">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/height" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/height" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/preGestationalWeight" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/preGestationalWeight" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/preGestationalWeightUnknown"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/preGestationalWeightUnknown" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/currentWeight" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/currentWeight" />
+                <TextView
+                    android:id="@+id/bmiLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/bmi" />
+                <TextView
+                    android:id="@+id/weightGain"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/weightGain" />
+                <TextView
+                    android:id="@+id/healthyAlert"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/healthyAlert" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/bloodPressureView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/bloodPressureTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/titleStyle"
+                android:text="@string/bloodPressure" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/bloodPressure"
+                style="@style/formStyle"
+                android:layout_below="@+id/bloodPressureTitle">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/pressureView">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/systolic" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/systolic" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/diastolic" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/diastolic" />
+                </LinearLayout>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/unableToRecordBP"
+                    android:text="@string/unableToRecordBP" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/unableToRecordBPReasonView">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/reasonTitle" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bpCuff"
+                        android:text="@string/bpCuffNotAvailable" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bpCuffBroken"
+                        android:text="@string/bpCuffBroken" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/reasonOther"
+                        android:text="@string/other" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/maternalExamView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/maternalExamTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/titleStyle"
+                android:text="@string/maternalExam" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/maternalExam"
+                style="@style/formStyle"
+                android:layout_below="@+id/maternalExamTitle">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/temperature" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/temperature" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/pulseRate" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pulseRate" />
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/pallorPresent" />
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/pallorYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/pallorNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no" />
+                </RadioGroup>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/respiratoryExam" />
+                <RadioGroup
+                    android:id="@+id/respiratoryExamGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/respiratoryNotDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notDone" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/respiratoryNormal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/normal" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/respiratoryAbnormal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/abnormal" />
+                </RadioGroup>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/abnormalRespiratoryChecked">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/oximetry" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/oximetry" />
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:id="@+id/abnormalRespiratoryType">
+                        <com.google.android.material.checkbox.MaterialCheckBox
+                            android:id="@+id/dyspnoea"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="@string/dyspnoea" />
+                        <com.google.android.material.checkbox.MaterialCheckBox
+                            android:id="@+id/cough"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="@string/cough" />
+                        <com.google.android.material.checkbox.MaterialCheckBox
+                            android:id="@+id/rapidBreathing"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="@string/rapidBreathing" />
+                        <com.google.android.material.checkbox.MaterialCheckBox
+                            android:id="@+id/slowBreathing"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="@string/slowBreathing" />
+                        <com.google.android.material.checkbox.MaterialCheckBox
+                            android:id="@+id/wheezing"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="@string/wheezing" />
+                        <com.google.android.material.checkbox.MaterialCheckBox
+                            android:id="@+id/rales"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="@string/rales" />
+                        <com.google.android.material.checkbox.MaterialCheckBox
+                            android:id="@+id/abnormalRespiratoryOtherCheck"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:tag="abnormalRespiratoryOtherCheck"
+                            android:text="@string/otherSpecify" />
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/specify"
+                            android:visibility="gone"
+                            android:id="@+id/abnormalRespiratoryOther" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/cardiacExam" />
+                <RadioGroup
+                    android:id="@+id/cardiacExamGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/cardiacNotDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notDone" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/cardiacNormal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/normal" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/cardiacAbnormal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/abnormal" />
+                </RadioGroup>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/cardiacAbnormalChecked">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/heartMurmur"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/heartMurmur" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/weakPulse"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/weakPulse" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/tachycardia"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/tachycardia" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/bradycardia"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/bradycardia" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/arrhythmia"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/arrhythmia" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cyanosis"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/cyanosis" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/coldSweats"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/coldSweats" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/abnormalCardiacOtherCheck"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:tag="abnormalCardiacOtherCheck"
+                        android:text="@string/otherSpecify" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/specify"
+                        android:visibility="gone"
+                        android:id="@+id/abnormalCardiacOther" />
+                </LinearLayout>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/breastExam" />
+                <RadioGroup
+                    android:id="@+id/breastExamGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/breastNotDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notDone" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/breastNormal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/normal" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/breastAbnormal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/abnormal" />
+                </RadioGroup>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/breastExamAbnormalChecked">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/nodule"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/nodule" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/discharge"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/discharge" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/flushing"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/flushing" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/localPain"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/localPain" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/bleeding"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/bleeding" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/increasedTemperature"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/increasedTemperature" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/abnormalBreastExamOtherCheck"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:tag="abnormalBreastExamOtherCheck"
+                        android:text="@string/otherSpecify" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/specify"
+                        android:visibility="gone"
+                        android:id="@+id/abnormalBreastExamOther" />
+                </LinearLayout>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/abdominalExam" />
+                <RadioGroup
+                    android:id="@+id/abdominalExamGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/abdominalNotDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notDone" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/abdominalNormal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/normal" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/abdominalAbnormal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/abnormal" />
+                </RadioGroup>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/abdominalExamAbnormalChecked">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/massTumor"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/massTumor" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/painOnSuperficialPalpation"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/superficialPalpation" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/painOnDeepPalpation"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/deepPalpation" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/painfulDecompression"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/painfulDecompression" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/abdominalExamOtherCheck"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:tag="abdominalExamOtherCheck"
+                        android:text="@string/otherSpecify" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/specify"
+                        android:visibility="gone"
+                        android:id="@+id/abdominalExamOther" />
+                </LinearLayout>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/pelvicExam" />
+                <RadioGroup
+                    android:id="@+id/pelvicExamGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/pelvicNotDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notDone" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/pelvicNormal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/normal" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/pelvicAbnormal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/abnormal" />
+                </RadioGroup>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/pelvicExamAbnormalChecked">
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/abnormalVaginalDischarge"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/abnormalVaginalDischarge" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/amnioticFluid"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/amnioticFluid" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/foulDischarge"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/foulDischarge" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/erythematousPapules"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/erythematousPapules" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/vesicles"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/vesicles" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/genitalUlcer"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/genitalUlcer" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/genitalPain"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/genitalPain" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/inguinal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/inguinal" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cervicalFriability"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/cervicalFriability" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/mucopurulentCervicitis"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/mucopurulentCervicitis" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/unilateral"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/unilateral" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/curdLikeVaginalDischarge"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/curdLikeVaginalDischarge" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/pelvicExamOtherCheck"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:tag="pelvicExamOtherCheck"
+                        android:text="@string/otherSpecify" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/specify"
+                        android:visibility="gone"
+                        android:id="@+id/pelvicExamOther" />
+                </LinearLayout>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/cervicalExam" />
+                <RadioGroup
+                    android:id="@+id/cervicalExamGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/cervicalNotDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notDone" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/cervicalDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/done" />
+                </RadioGroup>
+                <LinearLayout
+                    android:id="@+id/dilationView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/dilation" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/specify"
+                        android:visibility="gone"
+                        android:id="@+id/dilated" />
+                </LinearLayout>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/oedemaPresent" />
+                <RadioGroup
+                    android:id="@+id/oedemaPresentGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/oedemaYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/oedemaNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no" />
+                </RadioGroup>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/oedemaPresentChecks">
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/oedemaType" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/pittingAnkle"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/pittingAnkle" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/handsAndFeet"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/handsAndFeet" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/pittingLowerBack"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/pittingLowerBack" />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/legSwelling"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/legSwelling" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/oedemaSeverity" />
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/oedema1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/oedema1" />
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/oedema2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/oedema2" />
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/oedema3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/oedema3" />
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/oedema4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/oedema4" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/fetalAssessmentView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/fetalAssessmentTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/titleStyle"
+                android:text="@string/fetalAssessment" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/fetalAssessment"
+                style="@style/formStyle"
+                android:layout_below="@+id/fetalAssessmentTitle">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/symphysis" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/symphysis" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/questionLabelStyle"
+                    android:text="@string/fetalHeartBeat" />
+                <RadioGroup
+                    android:id="@+id/heartBeatPresentGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/heartBeatYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/heartBeatNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no" />
+                </RadioGroup>
+                <LinearLayout
+                    android:id="@+id/heartRateView"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/fetalHeartRate" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/fetalHeartRate" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/noFetusesView"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        style="@style/questionLabelStyle"
+                        android:text="@string/noFetuses" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/noFetuses" />
+                </LinearLayout>
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/noFetusesUnknown"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:tag="otherSymptomsCheck"
+                    android:text="@string/noFetusesUnknown" />
+            </LinearLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/formStyle"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/previous"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="25dp"
+                android:layout_alignParentLeft="true"
+                android:text="@string/previous"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/next"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_alignParentRight="true"
+                android:text="@string/next"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
